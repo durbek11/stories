@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap");
+:root {
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    transition: all 0.4s ease;
+}
+
+body {
+    font-family: "Zen Antique", serif;
+    color: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h2,
+h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: 540;
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+a,
+span {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    padding: 2.7rem 5.4rem;
+    text-shadow: black 1px 3px 6px;
+}
+
+.logo-title {
+    cursor: pointer;
+}
+
+header img {
+    width: 3.5rem;
+}
+
+
+/* ----- book-javascript ----- */
+
+header .book-close-btn {
+    display: block;
+}
+
+header .book-close-btn.active {
+    display: none;
+}
+
+header .book-open-btn {
+    display: none;
+}
+
+header .book-open-btn.active {
+    display: block;
+}
+
+
+/* ----- book-javascript ----- */
+
+header .menu-bar {
+    position: absolute;
+    top: 30vh;
+    right: -200px;
+    /* right: -20px; */
+    background: #000;
+    width: 170px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+}
+
+header .menu-bar.active {
+    right: -20px;
+    opacity: 1;
+}
+
+header .menu-bar li {
+    margin-bottom: 3rem;
+}
+
+header .menu-bar li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+header .menu-bar li a:hover {
+    color: rgb(71, 173, 187);
+}
+
+
+/* hero section */
+
+.hero {
+    background-image: url("./images/another-world.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero .title {
+    transform: translateY(240px);
+    position: relative;
+    z-index: 3;
+}
+
+.hero h1 {
+    text-shadow: black 1px 3px 6px;
+    font-size: 7.5rem;
+}
+
+.hero h3 {
+    width: 450px;
+    text-align: right;
+    text-shadow: black 1px 3px 6px;
+}
+
+
+/* sale section */
+
+.sale h2 {
+    font-size: 4rem;
+}
+
+.sale h3 {
+    font-size: 3rem;
+}
+
+.sale img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+}
+
+.story-card {
+    background-color: rgb(255, 255, 255);
+}
+
+.story-card h5 {
+    font-size: 2rem;
+}
+
+.story-card p {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.story-card:hover {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+
+/* company section */
+
+.company {
+    background-image: url("./images/house.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.company::after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.company h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 3.9rem;
+}
+
+.company p {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    line-height: 3.9rem;
+}
+
+.conmpany-text-last {
+    position: absolute;
+    top: 70%;
+    left: 7%;
+}
+
+.company-info .more a {
+    display: inline-block;
+    color: white;
+    font-size: 1.7rem;
+    padding: 0.6rem;
+}
+
+.company-info .more a:hover {
+    color: rgb(71, 173, 187);
+    transform: translateX(1rem);
+}
+
+
+/* hardware section */
+
+.hardware {
+    width: 50%;
+    height: 25%;
+}
+
+.hardware-card img {
+    width: 100%;
+    height: 100%;
+}
+
+.hardware-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hardware-card h3 {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    opacity: 0;
+}
+
+.hardware-card:hover img {
+    transform: scale(1.1);
+}
+
+.hardware-card .overlay {
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hardware-card:hover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: rgb(13, 71, 92);
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.hardware-card:hover h3 {
+    position: absolute;
+    display: block;
+    opacity: 1;
+}
+
+
+/* contact section */
+
+.contact {
+    background-image: url("./images/butterfly.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact input {
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.contact textarea {
+    width: 70%;
+}
+
+.contact .vision-sight-logo h3 {
+    position: absolute;
+    bottom: 10%;
+    right: 8%;
+    font-size: 4rem;
+}
+
+
+/* footer section */
+
+footer {
+    padding-bottom: 50px;
+    padding: 40px;
+    background-color: var(--dark);
+    font-size: 2rem;
+}
+
+footer h2 {
+    height: 50%;
+    font-size: 3rem;
+}
+
+footer a {
+    color: var(--body);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(71, 173, 187);
+}
+
+@media (max-width: 1000px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+    .hero h3 {
+        width: 400px;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .title {
+        transform: translateY(-50px);
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 6rem;
+    }
+    .hero h3 {
+        width: 100%;
+        text-align: center;
+    }
+    .hardware-card h3 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 45%;
+    }
+    .hero h3 {
+        font-size: 2rem;
+    }
+    /* company section */
+    .company-info {
+        text-align: center !important;
+        padding: 2rem !important;
+    }
+    .conmpany-text-last {
+        position: static;
+        margin-top: 30rem;
+    }
+    .company-info h2 {
+        margin-bottom: 4.6rem !important;
+    }
+    .company-info p {
+        line-height: 5rem;
+        font-size: 2.2rem;
+    }
+    .company-info .more {
+        margin-top: 9rem;
+    }
+    .contact h2 {
+        font-size: 4.6rem;
+        text-align: center;
+    }
+    /* hardware */
+    .hardware {
+        width: 70%;
+        height: 25%;
+    }
+    /* footer section */
+    footer {
+        padding-top: 15px;
+    }
+}
